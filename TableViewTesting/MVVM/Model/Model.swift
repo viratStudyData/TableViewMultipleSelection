@@ -11,7 +11,6 @@ import Foundation
 struct Model {
     var title: String
     
-    
 }
 
 class ViewModelItem {

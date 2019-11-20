@@ -15,6 +15,7 @@
 		75F7E3F52385AAEF006C18A2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7E3F42385AAEF006C18A2 /* Model.swift */; };
 		75F7E3FD2385AF33006C18A2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7E3FC2385AF33006C18A2 /* ViewModel.swift */; };
 		75F7E4032385B66E006C18A2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7E4012385B66E006C18A2 /* CustomCell.swift */; };
+		75F7E4072385C41A006C18A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F7E4062385C41A006C18A2 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		75F7E3F42385AAEF006C18A2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		75F7E3FC2385AF33006C18A2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		75F7E4012385B66E006C18A2 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		75F7E4062385C41A006C18A2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		75F7E3DF2385A92A006C18A2 /* TableViewTesting */ = {
 			isa = PBXGroup;
 			children = (
+				75F7E4052385C3F7006C18A2 /* Constants */,
 				75F7E3FB2385AEB5006C18A2 /* AppDataAndResource */,
 				75F7E3FA2385AE9B006C18A2 /* Cells */,
 				75F7E3F62385AE39006C18A2 /* MVVM */,
@@ -119,6 +122,14 @@
 				75F7E3EC2385A92C006C18A2 /* Info.plist */,
 			);
 			path = AppDataAndResource;
+			sourceTree = "<group>";
+		};
+		75F7E4052385C3F7006C18A2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				75F7E4062385C41A006C18A2 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 				75F7E3E12385A92A006C18A2 /* AppDelegate.swift in Sources */,
 				75F7E4032385B66E006C18A2 /* CustomCell.swift in Sources */,
 				75F7E3F52385AAEF006C18A2 /* Model.swift in Sources */,
+				75F7E4072385C41A006C18A2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

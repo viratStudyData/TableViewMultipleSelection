@@ -9,10 +9,8 @@
 import UIKit
 
 class ViewModel: NSObject {
-    class var identifier: String {
-        return String(describing: self)
-    }
-    
+    //MARK: - Properties
+    // Lets assume array comming from backend database
     let dataArray = [Model(title: "Swift"),
                      Model(title: "Objective C"),
                      Model(title: "Java"),
@@ -42,11 +40,14 @@ class ViewModel: NSObject {
                      Model(title: "Pascal")]
     
     var items = [ViewModelItem]()
+    
+    
     override init() {
         items = dataArray.map { ViewModelItem(item: $0) }
     }
 }
 
+//MARK: - TableView DataSource
 extension ViewModel: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count  // (1)
@@ -54,12 +55,16 @@ extension ViewModel: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CustomCell {
-            cell.item = items[indexPath.row] // (2)
+        if let cell = tableView.dequeueReusableCell(withIdentifier: Cell.TableViewCell.CustomCell.rawValue, for: indexPath) as? CustomCell {
+            cell.item = items[indexPath.row]
+            
             // select/deselect the cell
             if items[indexPath.row].isSelected {
-                tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none) // (3)
+                //Call setSelected func in Cell Class and pass true for selected
+                tableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+                
             } else {
+                //Call setSelected func in Cell Class and pass false for selected
                 tableView.deselectRow(at: indexPath, animated: true) // (4)
                 
             }
